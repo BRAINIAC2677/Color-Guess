@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#color-code {
+  height: 30vh;
+  background-color: tomato;
+  font-size: 2.5rem;
+}
+
+#color-code p {
+  margin: 0px 1%;
+}
+
+#color-code p:first-child {
+  font-weight: bolder;
+}
+
+#code-box {
+  border: black solid 2px;
+  border-radius: 10px;
+  padding: 0.3rem 1rem;
+  background-color: white;
+  color: black;
+}
+
+#mid-ribbon {
+  height: 7vh;
+  background-color: cyan;
+  justify-content: space-around;
+  font-size: 1.5rem;
+}
+
+#color-opts {
+  height: 63vh;
+  padding: 2rem;
+  background-color: rgb(48, 43, 43);
+}
+
+#color-opts > div.container {
+  width: 40vw;
+  margin: auto;
+}
+
+.opts {
+  width: 10vw;
+  height: 10vw;
+  border: solid black 2px;
+  margin: 3% 3%;
+}
