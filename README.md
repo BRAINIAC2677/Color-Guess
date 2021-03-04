@@ -7,3 +7,6 @@ This is a one-page website for testing your color code skills.
 - HTML
 - CSS
 - JavaScript
+
+## Website Link:
+[Click Here](https://color-guess77.netlify.app/)
