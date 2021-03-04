@@ -39,7 +39,9 @@ function toggleVolatileOpts() {
 //loading a new test
 function newTest() {
   textBox.innerText = "You Can Can.";
-  optContainer.style.backgroundColor = "rgb(48, 43, 43)";
+  optContainer.style.backgroundColor = getComputedStyle(
+    document.documentElement
+  ).getPropertyValue("--clr-primary-1");
 
   let codes = [];
   for (let i = 0; i < optNo; i++) {
@@ -74,10 +76,10 @@ document.querySelector("#color-opts>div").addEventListener("click", (event) => {
   let clickedOpt = event.target;
   if (clickedOpt.className == "opts") {
     if (clickedOpt == correctOpt) {
-      optContainer.style.backgroundColor = "rgba(0, 255, 0, 0.5)";
+      optContainer.style.backgroundColor = "rgba(0, 255, 0, 0.3)";
       textBox.innerText = "You Got It Right!!";
     } else {
-      optContainer.style.backgroundColor = "rgba(255, 0, 0, .5)";
+      optContainer.style.backgroundColor = "rgba(255, 0, 0, .3)";
       textBox.innerText = "Wrong Guess :3";
     }
   }

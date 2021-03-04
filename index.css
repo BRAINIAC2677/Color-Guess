@@ -1,7 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
+
+:root {
+  /* 
+  ==========
+  Global variables
+  ==========
+  */
+
+  --clr-primary-1: #e0fbfc;
+  --clr-secondary-1: #22223b;
+  --clr-accent-11: #ffd166;
+  --border-curve: 10px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Akaya Telivigala", cursive;
 }
 
 .container {
@@ -13,7 +29,7 @@
 
 #color-code {
   height: 30vh;
-  background-color: tomato;
+  background-color: var(--clr-secondary-1);
   font-size: 2.5rem;
 }
 
@@ -22,27 +38,29 @@
 }
 
 #color-code p:first-child {
+  color: var(--clr-accent-11);
   font-weight: bolder;
 }
 
 #code-box {
+  font-style: italic;
+  width: 20vw;
   border: black solid 2px;
-  border-radius: 10px;
-  padding: 0.3rem 1rem;
-  background-color: white;
-  color: black;
+  border-radius: var(--border-curve);
+  background-color: var(--clr-accent-11);
+  text-align: center;
 }
 
 #mid-ribbon {
   height: 7vh;
-  background-color: cyan;
+  background-color: var(--clr-accent-11);
   justify-content: space-around;
   font-size: 1.5rem;
 }
 
 #color-opts {
   height: 63vh;
-  background-color: rgb(48, 43, 43);
+  background-color: var(--clr-primary-1);
 }
 
 #color-opts > div.container {
@@ -56,6 +74,7 @@
   height: 8vw;
   padding: 1rem;
   border: solid black 2px;
+  border-radius: var(--border-curve);
   margin: 3% 3%;
   transition: all 0.3s;
 }
@@ -72,16 +91,30 @@
   display: block;
   margin: auto;
   font-size: 1.5rem;
-  font-weight: bold;
-  color: red;
-  background-color: rgb(173, 131, 131);
+  background-color: var(--clr-accent-11);
   padding: 0.5rem 1rem;
-  border-radius: 10px;
+  border-radius: var(--border-curve);
+  outline: 0px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.btn:hover {
+  color: var(--clr-accent-11);
+  background-color: var(--clr-secondary-1);
+}
+
+select {
+  font-size: 1.2rem;
+  color: var(--clr-accent-11);
+  background-color: var(--clr-secondary-1);
+  padding: 5px 20px;
+  border: solid rgb(224, 178, 178) 2px;
+  border-radius: var(--border-curve);
   outline: 0px;
   cursor: pointer;
 }
 
-.btn:hover {
-  color: rgb(173, 131, 131);
-  background-color: red;
+select:hover {
+  border: solid rgb(231, 223, 223) 2px;
 }
