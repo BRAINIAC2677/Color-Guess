@@ -1,9 +1,9 @@
-let codeBox = document.querySelector("#code-box");
-let textBox = document.querySelector("#prompt-text");
+let codeBox = document.querySelector("#color-code p:last-child ");
+let textBox = document.querySelector("#mid-ribbon p");
 let selectFormat = document.querySelector("#code-format");
 let selectDifficulty = document.querySelector("#difficulty");
 let formatText = document.querySelector("#color-code>p:first-child");
-let optContainer = document.querySelector("#color-opts > div.container");
+let optContainer = document.querySelector("#color-opts .container");
 let volatileOpts = document.querySelectorAll(".opts:nth-child(n+4)");
 let correctOpt;
 let rightHex;

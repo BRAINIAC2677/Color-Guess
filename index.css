@@ -1,36 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
 
+/* variable declarations */
 :root {
-  /* 
-  ==========
-  Global variables
-  ==========
-  */
-
+  --border-curve: 10px;
   --clr-primary-1: #e0fbfc;
   --clr-secondary-1: #22223b;
   --clr-accent-11: #ffd166;
-  --border-curve: 10px;
+  --code-box-size: 320px;
+  --font-size-1: 2.5rem;
+  --font-size-2: 1.5rem;
+  --opt-box-size: 100px;
 }
 
+.opts {
+  --opt-margin: 30px 30px;
+}
+
+/* styles declarations */
 * {
   box-sizing: border-box;
+  font-family: "Akaya Telivigala", cursive;
   margin: 0;
   padding: 0;
-  font-family: "Akaya Telivigala", cursive;
 }
 
 .container {
+  align-content: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
 }
 
 #color-code {
-  height: 30vh;
   background-color: var(--clr-secondary-1);
-  font-size: 2.5rem;
+  font-size: var(--font-size-1);
+  height: 30vh;
 }
 
 #color-code p {
@@ -42,41 +46,55 @@
   font-weight: bolder;
 }
 
-#code-box {
-  font-style: italic;
-  width: 20vw;
+#color-code p:last-child {
+  background-color: var(--clr-accent-11);
   border: black solid 2px;
   border-radius: var(--border-curve);
-  background-color: var(--clr-accent-11);
+  font-style: italic;
   text-align: center;
+  width: var(--code-box-size);
 }
 
 #mid-ribbon {
-  height: 7vh;
   background-color: var(--clr-accent-11);
+  font-size: var(--font-size-2);
+  height: 7vh;
   justify-content: space-around;
-  font-size: 1.5rem;
+}
+
+select {
+  background-color: var(--clr-secondary-1);
+  border: solid rgb(224, 178, 178) 2px;
+  border-radius: var(--border-curve);
+  color: var(--clr-accent-11);
+  cursor: pointer;
+  font-size: var(--font-size-2);
+  outline: 0px;
+  padding: 2px 20px;
+}
+
+select:hover {
+  border: solid rgb(231, 223, 223) 2px;
 }
 
 #color-opts {
-  height: 63vh;
   background-color: var(--clr-primary-1);
+  height: 63vh;
 }
 
-#color-opts > div.container {
-  width: 40vw;
+#color-opts .container {
   height: 50vh;
   margin: auto;
+  width: calc(var(--opt-box-size) * 5);
 }
 
 .opts {
-  width: 8vw;
-  height: 8vw;
-  padding: 1rem;
   border: solid black 2px;
   border-radius: var(--border-curve);
-  margin: 3% 3%;
+  height: var(--opt-box-size);
+  margin: var(--opt-margin);
   transition: all 0.3s;
+  width: var(--opt-box-size);
 }
 
 .opts:hover {
@@ -88,33 +106,32 @@
 }
 
 .btn {
-  display: block;
-  margin: auto;
-  font-size: 1.5rem;
   background-color: var(--clr-accent-11);
-  padding: 0.5rem 1rem;
   border-radius: var(--border-curve);
-  outline: 0px;
   cursor: pointer;
+  display: block;
+  font-size: var(--font-size-2);
+  margin: auto;
+  outline: 0px;
+  padding: 0.5rem 1rem;
   transition: all 0.4s;
 }
 
 .btn:hover {
-  color: var(--clr-accent-11);
   background-color: var(--clr-secondary-1);
+  color: var(--clr-accent-11);
 }
 
-select {
-  font-size: 1.2rem;
-  color: var(--clr-accent-11);
-  background-color: var(--clr-secondary-1);
-  padding: 5px 20px;
-  border: solid rgb(224, 178, 178) 2px;
-  border-radius: var(--border-curve);
-  outline: 0px;
-  cursor: pointer;
-}
+/* media queries */
+@media all and (max-width: 580px) {
+  :root {
+    --code-box-size: 220px;
+    --font-size-1: 1.5rem;
+    --font-size-2: 0.8rem;
+    --opt-box-size: 60px;
+  }
 
-select:hover {
-  border: solid rgb(231, 223, 223) 2px;
+  .opts {
+    --opt-margin: 15px 15px;
+  }
 }
