@@ -42,18 +42,46 @@
 
 #color-opts {
   height: 63vh;
-  padding: 2rem;
   background-color: rgb(48, 43, 43);
 }
 
 #color-opts > div.container {
   width: 40vw;
+  height: 50vh;
   margin: auto;
 }
 
 .opts {
-  width: 10vw;
-  height: 10vw;
+  width: 8vw;
+  height: 8vw;
+  padding: 1rem;
   border: solid black 2px;
   margin: 3% 3%;
+  transition: all 0.3s;
+}
+
+.opts:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.opts:nth-child(n + 4) {
+  display: none;
+}
+
+.btn {
+  display: block;
+  margin: auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: red;
+  background-color: rgb(173, 131, 131);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  outline: 0px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: rgb(173, 131, 131);
+  background-color: red;
 }
